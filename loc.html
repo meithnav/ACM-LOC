@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>LOC</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+                <!-- Load icon library -->
+           <!--JQuery-->
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+           <!--Font Awesome-->
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+           
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+           <!--Scrolling Effect-->
+            <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+            <!--Header Font-->
+            <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+   
+           <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+           <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">           <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet"> -->
+           <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+           <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+           <!--Scrolling Effect-->
+           <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+           <!--Favicon-->
+           <link rel="shortcut icon" href="{% static 'images/acm-black-logo.png' %}" type="image/x-icon">
+        <!-- PageLayout JS -->
+        <script type="text/javascript" src="./home.js"></script>
+
+           <link rel="stylesheet" href="loc.css">
+           <script type="text/javascript" src="loc.js"></script>
+    </head>
+    <body>
+        <!-- HAMBURGER MENU -->
+        <div class="header" id="header">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="./acm-white-logo.png" alt=""></a>
+            </div>
+            <div class="menubtn" id="menubtn">
+                <div class="p">
+                    <p id="bar1"></p>
+                    <p id="bar2"></p>
+                    <p id="bar3">  </p>
+                </div>
+            </div>
+    
+            <div class="innerheader" id="innerheader">
+                        <div class="items"><a href="#home"> Home </a></div>
+                        <div class="items"><a href="#apply">Apply Now</a></div>
+                        <div class=" items"><a href="#prizes">Prizes</a></div>
+                        <div class=" items"><a href="#guidelines">Guidelines</a></div>
+                        <div class=" items"><a href="#schedule">Schedule</a></div>
+                        <div class=" items"><a href="#domain">Domain</a></div>
+                        <div class="items"><a href="#faq">FAQs</a></div>
+                        <div class="items contact"><a href="#sponsors">Sponsors</a></div>
+                        <div class="items member"><a href="#" class="membertext">Apply Now</a></div>
+                    </div><!--closes innerheader-->
+    
+        </div> <!--closes header-->
+        
+        <div class="sidenavbar">
+            <div class="side_item side_home  active_sidebar"><a href="#home">Home</a></div>
+            <div class="side_item side_apply"><a href="#apply">Apply Now</a></div>
+            <div class="side_item side_prizes"><a href="#prizes">Prizes</a></div>
+            <div class="side_item side_guidelines"><a href="#guidelines">Guidelines</a></div>
+            <div class="side_item side_schedule"><a href="#schedule">Schedule</a></div>
+            <div class="side_item side_domain"><a href="#domain">Domain</a></div>
+            <div class="side_item side_faqs"><a href="#faq">FAQs</a></div>
+            <div class="side_item side_sponsors"><a href="#sponsors">Sponsors</a></div>
+            <div class="side_item side_contact"><a href="#contact">Contact Us</a></div>
+        </div>
+
+
+          <div class="body_banner" id="home">
+              <div class="loc">
+                  <h1>
+                    <span class="loc_header">LOC 3.0</span>
+                    <div class="blobs_1"></div>
+                    <div class="blobs_2"></div>
+                    <div class="blobs_3"></div>
+                    <div class="blobs_4"></div>
+                    <div class="blobs_5"></div>
+                    <div class="blobs_6"></div>
+                    <div class="blobs_7"></div>
+                </h1>
+                  <span class="loc_date">25th - 27th March, 2021</span>
+
+                
+              </div>
+            <div class="clock-container">
+                <div id="clockdiv" class="clockdiv">
+                    <div>
+                        <span class="days"></span>
+                        <div class="smalltext">DAYS</div>
+                     </div>
+    
+                     <div class="collons">
+                        <!-- <span class="smalltext">:</span> -->
+                        <div class="smalltext"><h1 style="font-size: 5rem;">:</h1></div>
+                     </div>
+    
+    
+                     <div style="margin-left:7%;">
+                      <span class="hours"></span>
+                      <div class="smalltext">HOURS</div>
+                     </div>
+    
+                     <div class="collons">
+                        <!-- <span class="smalltext">:</span> -->
+                        <div class="smalltext "><h1 style="font-size: 5rem;">:</h1></div>
+                     </div>
+    
+    
+                     <div style="margin-left:7%;">
+                          <span class="minutes"></span>
+                       <div class="smalltext">MINUTES</div>
+                     </div>
+    
+                     <div class="collons">
+                        <!-- <span class="smalltext">:</span> -->
+                        <div class="smalltext "><h1 style="font-size: 5rem;">:</h1></div>
+                     </div>
+    
+    
+                     <div style="margin-left:7%;">
+                     <span class="seconds" style="width: 90px;"></span>
+                      <div class="smalltext" style="padding-left: 27px;">SECONDS</div>
+                     </div>
+                </div>
+              </div>
+          </div>
+         
+
+        <div class="row row-cols-2 "  id="apply" style="width: 100%; padding-top: 10% ;">
+
+            <div class="col-sm-6">
+                <div class="left-side">
+                    <img src="left-info2.png"  alt="">
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 ">
+                <div class="visit_blob">
+                    <!-- This SVG is from https://codepen.io/Ali_Farooq_/pen/gKOJqx -->
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 350">
+                    <path d="M156.4,339.5c31.8-2.5,59.4-26.8,80.2-48.5c28.3-29.5,40.5-47,56.1-85.1c14-34.3,20.7-75.6,2.3-111  c-18.1-34.8-55.7-58-90.4-72.3c-11.7-4.8-24.1-8.8-36.8-11.5l-0.9-0.9l-0.6,0.6c-27.7-5.8-56.6-6-82.4,3c-38.8,13.6-64,48.8-66.8,90.3c-3,43.9,17.8,88.3,33.7,128.8c5.3,13.5,10.4,27.1,14.9,40.9C77.5,309.9,111,343,156.4,339.5z"/>
+                    </svg>
+                  </div>
+
+                <div class="right-side">
+                    <div class="right-text-head">
+                        <h2>Some v amazing phrase which can be used </h2>
+                        <p>ever since the 1500s, when an specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset </p>
+                    </div>
+        
+                <div class="button-apply">
+                    <button type="button" class="btn btn-large">Apply with Devfolio</button>
+                </div>
+          
+        
+
+            </div>
+
+            </div>
+
+        </div>
+
+        <div class="lastyearstats-container">
+            <div class="stats" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
+                <div class='row'>
+                    <div class="col-sm-3">
+                        <img src="Group.png"/>
+                        <h2>150</h2>
+                        <h4>Hackers</h4>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="Vector.png"/>
+                        <h2>600</h2>
+                        <h4>Registrations</h4>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="noto-v1_money-bag.png"/>
+                        <h2>₹30,000</h2>
+                        <h4>Worth Prizes</h4>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="Vector2.png"/>
+                        <h2>15</h2>
+                        <h4>Colleges</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    <div class="prize-container" id="prizes">  
+        <h1 class="font">Prizes</h1>
+        <div class="prizes" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
+            <div class="row setting" style="width: 100%;">
+                <div class="col-sm-4">
+                    <div class="rank">
+                        <h1>1</h1>
+                    </div>
+                    <span class="iconify" data-icon="vaadin:trophy" data-inline="false"></span>
+                    <!-- <img src="gold-cup.png" alt="" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000"> -->
+                    <h2>₹ 15,000</h2>
+                </div>
+                <div class="col-sm-4">
+                    <div class="rank">
+                        <h1>2</h1>
+                    </div>
+                    <span class="iconify" data-icon="vaadin:trophy" data-inline="false"></span>
+                    <!-- <img src="silver-cup.png" alt="" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000"> -->
+                    <h2>₹ 5,000</h2>
+                </div>
+                <div class="col-sm-4">
+                    <div class="rank">
+                        <h1>3</h1>
+                    </div>
+                    <span class="iconify" data-icon="vaadin:trophy" data-inline="false"></span>
+                    <!-- <img src="bronze-cup.png" alt="" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000"> -->
+                    <h2>₹ 2,000</h2>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="guidelines-container" id="guidelines">
+        <h1 class="font" >Guidelines</h1>
+        <div class="guidelines">
+            <div class="row setting" style="width: 100%;">
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    <div class="guide-box">
+                        <div class="numbering-guide">1</div>
+                        <h1>Teams can be of minimum 2 and maximum 4 members</h1>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 ">
+                    <div class="guide-box">
+                        <div class="numbering-guide">2</div>
+                        <h1>The reporting time is sharp 8:30am on the 22nd of February.</h1>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 ">
+                    <div class="guide-box">
+                        <div class="numbering-guide">3</div>
+                        <h1>All participants are requested to get their respective Identity Cards.</h1>
+                    </div>
+                </div>
+            <!-- </div> -->
+            <!-- <div class="row setting" style="width: 100%;"> -->
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    <div class="guide-box">
+                        <div class="numbering-guide">4</div>
+                        <h1>Teams will be shortlisted on the basis of their Devfolio profile.</h1> 
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    <div class="guide-box">
+                        <div class="numbering-guide">5</div>
+                        <h1>Teams will be shortlisted on the basis of their Devfolio profile.</h1>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    <div class="guide-box">
+                        <div class="numbering-guide">6</div>
+                        <h1>Teams will be shortlisted on the basis of their Devfolio profile.</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row setting" style="width: 100%;">
+                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                    <div class="guide-box">
+                        <div class="numbering-guide">7</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                    <div class="guide-box">
+                        <div class="numbering-guide">8</div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <div class="schedule" id="schedule">
+        <h1 class="font schedule_font">Schedule</h1>
+        <div class="schedule_content">
+
+            <div class="track_line"></div>
+
+            <div class="schedule_row">
+                <div class="left"><span class="schedule_active">1</span></div>
+                <div class="date">5th March</div>
+                <div class="right">- Registration Begins</div>
+            </div>
+            <div class="schedule_row">
+                <div class="left"><span class="schedule_active">2</span></div>
+                <div class="date">5th March</div>
+                <div class="right">- Registration Ends</div>
+            </div>
+            <div class="schedule_row">
+                <div class="left"><span>3</span></div>
+                <div class="date">5th March</div>
+                <div class="right">- Shortlisted Teams Out</div>
+            </div>
+            <div class="schedule_row">
+                <div class="left"><span>4</span></div>
+                <div class="date">5th March</div>
+                <div class="right">- Hack Day</div>
+            </div>
+            <div class="schedule_row">
+                <div class="left"><span>5</span></div>
+                <div class="date">5th March</div>
+                <div class="right">- Price Distribution</div>
+            </div>
+
+           
+        </div>
+    </div>
+
+    <div class="domain-container" id="domain">
+        <h1 class="font" style="margin-bottom: 100px;">Domains</h1>
+        <div class="domains">
+            <div class="row setting" style="width: 100%;">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="domain-card">
+                        <span class="iconify" data-icon="mdi:book-education" data-inline="false"></span>
+                        <h1>Education Communities</h1>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="domain-card">
+                        <span class="iconify" data-icon="carbon:report-data" data-inline="false"></span>
+                        <h1>Sports <br> Analytics</h1>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="domain-card">
+                        <span class="iconify" data-icon="ion:newspaper-sharp" data-inline="false"></span>
+                        <h1>Crime, News & <br> Law</h1>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="domain-card">
+                        <span class="iconify" data-icon="fluent:weather-hail-day-20-regular" data-inline="false"></span>
+                        <h1>Weather & <br>Climate</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class=" text-center" id="sponsors">
+        <h1 class="serveTop cmnHeader font ">Sponsors</h1>
+    </div>
+   
+    <div class="row setting">          
+          <div class="col-lg-3 col-md-4  text-center"><a href="https://www.wolfram.com/language/"><img class="sponsor" style="border-radius: 10px" src="./acm-white-logo.png"></a></div>
+          
+          <div class="col-lg-3 col-sm-4  text-center"><a href="https://codingblocks.com/"><img class="sponsor" style="border-radius: 10px" src="./Vector.png"></a></div>
+         <div class="col-lg-3 col-sm-4  text-center"><a href="https://balsamiq.com/"><img class="sponsor" style="border-radius: 10px" src="https://cdn.iconscout.com/icon/free/png-512/devfolio-1649779-1399882.png"></a></div> 
+          
+          
+          <div class="col-lg-3 col-sm-4  text-center"><a href="https://www.hellointern.com/"><img class="sponsor styleInfo" style="border-radius: 10px" src="./noto-v1_money-bag.png"></a></div>
+          <div class="col-lg-3 col-sm-4  text-center"><a href="https://www.linode.com/"><img class="sponsor" style="border-radius: 10px" src="./logo2.png"></a></div>
+    
+          <div class="col-lg-3 col-sm-4  text-center"><a href="https://cloudsploit.com/"><img class="sponsor" style="border-radius: 10px" src="./acm-white-logo.png"></a></div>
+          
+          <div class="col-lg-3 col-sm-4  text-center"><a href="https://www.thesouledstore.com/"><img class="sponsor" style="border-radius: 10px" src="./logo2.png"></a></div>
+          
+          <div class="col-lg-3 col-sm-4  text-center "><a href="https://www.xinfin.org/"><img class="sponsor" style="border-radius: 10px" src="./acm-white-logo.png"></a></div>
+          
+
+    </div>
+
+    <div id="faq">
+        <h2 class="font " style="font-size: 40px; padding-top: 40px;">Frequently Asked Questions</h2>
+        <p>Can’t find the answers to what you are looking for? <a href="" style="text-decoration: none;"><span class="faq-p-span">Reach out to our team.</span></a></p>
+        <div class="faqContainer">
+            <button class="collapsible"><span class="numbering-faq">1</span>What is a Hackathon?</button>
+            <div class="contents">
+                <p style="margin-top: 10px;">A hackathon is a design sprint-like event in which computer programmers and others involved in software development, including graphic designers, interface designers, project managers, and others collaborate intensively on software projects
+
+                    The goal of a hackathon is to create usable software with the goal of creating a functioning product by the end of the event.</p>
+            </div>
+            <!--<button class="collapsible">What are the problem statements for the hackathon?</button>-->
+            <!--<div class="contents">-->
+            <!--    <p style="margin-top: 10px;">The problem statements will be declared soon. Once you’ve registered we’ll keep you posted with all details.</p>-->
+            <!--</div>-->
+            <button class="collapsible"><span class="numbering-faq">2</span>How do we form a team?</button>
+            <div class="contents">
+                <p style="margin-top: 10px;">Each team would comprise of 2-4 members including the team leader. All team members should be from same college; no inter-college teams are allowed. However, members from different branches of the same college/ institute can form a team.</p>
+            </div>
+            
+            <button class="collapsible"><span class="numbering-faq">3</span>What if this is my first hackathon?</button>
+            <div class="contents">
+                <p style="margin-top: 10px;">LOC Hackathon is the best way to start as we provide you with mentors and talks from industry experts. Our aim is to provide a place to learn in a short amount of time, interact and learn from other like minded people.</p>
+            </div>
+            
+            <button class="collapsible"><span class="numbering-faq">4</span>What will be provided during the hackathon?</button>
+            <div class="contents">
+                <p style="margin-top: 10px;">You can concentrate on the coding, leave everything else to us! Food, water and entertainment shall be provided from our side, with air conditioned classrooms and free internet!</p>
+            </div>
+            <button class="collapsible"><span class="numbering-faq">5</span>What should I bring?</button>
+            <div class="contents">
+                <p style="margin-top: 10px;">We recommend to get your own laptop with all the necessary softwares installed, chargers, student ID, change of clothes, pillow and blankets as per your convenience.</p>
+            </div>
+            <button class="collapsible"><span class="numbering-faq">6</span>What should I not bring?</button>
+            <div class="contents">
+                <p style="margin-top: 10px;">Weapons, drugs, alcohol of any kind are not permitted.</p>
+            </div>
+            <button class="collapsible"><span class="numbering-faq">7</span>What is the format for the 2 rounds?</button>
+            <div class="contents">
+                <p style="margin-top: 10px;">The two rounds shall be held on the same date. Round 1 is a simple coding puzzle and will be used to allot domains to the teams.Round 2 is a 24 hour hackathon.</p>
+            </div>
+        </div>
+    </div> 
+  
+    <div class="mapMarker row mapsDiv" id="contact"> 
+        <div class="col-md-6 map_left"  >
+
+            <h3 class="text_header" >Co-Organizers</h3>
+
+           
+                <div class="text_coordinator">
+                    <span class="branchHead" >Meith Navlakha</span> 
+                    <span class="line" ></span> 
+                    <span class="email_coordinator" >meithnavlakha@gmail.com</span> 
+                </div>
+
+                <div class="text_coordinator">
+                    <span class="branchHead" >Meith Navlakha</span> 
+                    <span class="line" ></span> 
+                    <span class="email_coordinator" >meithnavlakha@gmail.com</span> 
+                </div>
+           
+            <h3 class="text_header">Contact Us</h3>
+            <div class=" text_coordinator number">
+                <span class="branchHead">Meith - <number>+91 XXXXXXXXXX</number></span>
+            </div>
+            <div class="text_coordinator number">
+                <span class="branchHead">Meith - <number>+91 XXXXXXXXXX</number></span>
+            </div>
+ 
+           
+        </div>
+
+        <div class="col-md-6 mapId map_right" id="mapId">
+            <iframe class="map" style="box-shadow: 2px 2px 2px 1px rgba(128,128,128,0.1);" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d942.4994801090171!2d72.83743607483443!3d19.107747162267845!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x75f29a4205098f99!2sDwarkadas+J+Sanghvi+College+of+Engineering!5e0!3m2!1sen!2sus!4v1397913464271" frameborder="0" style="border:0"></iframe>
+    
+        </div>
+      </div>
+
+    </div>
+
+    <footer id="footer" class="footer-distributed " style="padding-top: 80px;padding-bottom: 10px;">
+            
+        <div class="row" style="color:white;line-height: 2;">
+
+            <div class="col-md-3 col-xs-12 footerModify text-center">
+                <div class="footerTitle">
+                    About us
+                </div>
+                <div class="footerLogo">
+                    <a class="" >
+                        <img class="styleFootLogo" width="50%" src="file:///C:/Users/junai/OneDrive%20-%20Shri%20Vile%20Parle%20Kelavani%20Mandal/Desktop/DJSCE-ACM-LOC/assets/images/acm-logo.png"/>
+                    </a> 
+                </div>
+            
+                <div>
+                    Don't let us convince you about our success. Let our three consecutive Best Student Chapter of the Year awards do the talking.
+                </div>
+
+            </div>
+            <div class="col-md-3 col-xs-12 footerModify text-center">
+                <div class="footerTitle text-center">
+                    Navigation
+                </div>
+                <div class="row">
+                    <div class=" col-xs-6 col-md-6 col-lg-6 text-center">
+                    
+                            <a href="#home" class="footerLink"><i class="fa fa-angle-right footerIcon"></i>Home</a>
+                            <a href="#domain" class="footerLink"><i class="fa fa-angle-right footerIcon"></i>Problems</a>
+                            <a href="#schedule" class="footerLink"><i class="fa fa-angle-right footerIcon"></i>Schedule</a>
+                            
+                    
+                    </div>
+                    <div class="col-md-6 col-xs-6 col-lg-6 text-center">
+                        <a href="#sponsors" class="footerLink"><i class="fa fa-angle-right footerIcon"></i>Sponsors</a>
+                        <a href="#prize" class="footerLink"><i class="fa fa-angle-right footerIcon"></i>Prizes</a>
+                        <a href="#faq" class="footerLink"><i class="fa fa-angle-right footerIcon"></i>FAQ</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3 col-xs-12 footerModify  text-center">
+                <div class="footerTitle">
+                    Location
+                </div>
+                <div>
+                    <ul style="list-style-type:none;padding:0 ">
+                        <li class="widget_anpstext">
+                            
+                            No.U-15,
+                            J.V.P.D. Scheme,
+                            Bhaktivedanta Swami Marg,
+                            Opp.Cooper Hospital
+                            Vile Parle (West),
+                            
+                            Mumbai-400 056.
+                            India
+                        </li>
+                    
+                       
+                        <li class="widget_anpstext">
+                            coreacm@gmail.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-12 footerModify text-center">
+                <div class="footerTitle">
+                    Follow us
+                </div>
+                <div>
+                    <a class="mediaLink" href="https://www.facebook.com/djscoe.acm.5"><i class="fa fa-facebook"></i></a>
+                    <a class="mediaLink" ><i class="fa fa-globe"></i></a>
+                    <a class="mediaLink" href="https://www.instagram.com/djsanghvi_acm/?hl=en"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-md-12 text-center">Made with  <span class="fa fa-heart " style="color: red;"></span> by DJACM Infotech team</div>
+        </div>
+        
+        
+    </footer>
+
+
+    
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+        <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+        <!--Scrolling Effect-->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+         AOS.init({
+
+             offset: 100, // offset (in px) from the original trigger point
+             delay: 10, // values from 0 to 3000, with step 50ms
+             duration: 600, // values from 0 to 3000, with step 50ms
+            });
+        </script>
+
+ <!-- STOP-WATCH TIMER -->
+<script>
+// var final = new Date(2021, 1, 22, 23, 59, 59).getTime();
+// setInterval(() => {
+//   var present = new Date().getTime();
+//   var remainingTime = final - present;
+//   var days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+//   var hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//   var minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+//   var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+// }, 1000);
+
+function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+
+var deadline = new Date(2021, 2, 14, 23, 50, 59);
+initializeClock('clockdiv', deadline);
+    </script>
+    
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+var j;
+
+for (j = 0; j < coll.length; j++) {
+  coll[j].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      for(var k = 0; k < j; k++){
+        document.getElementsByClassName("collapsible")[k].nextElementSibling.style.maxHeight=null;
+        document.getElementsByClassName("collapsible")[k].classList.remove("active");
+        content.style.maxHeight = content.scrollHeight + "px";
+        this.classList.add("active");
+      }
+    } 
+  });
+}
+    </script>
+
+    <!--Sticky Scrollbar -->
+<script>
+    window.onscroll = function() { StickyHeader() };
+  </script>
+  
+  <!--JQuery Menu for small screen-->
+  <script>
+   $(document).ready(function(){
+        $("#menubtn").click(function(){
+          $("#innerheader").slideToggle("activemenu");
+          $(".header").toggleClass("activemenu");
+          $(".logo").toggleClass("activelogo");
+  
+        });
+      });
+    
+   </script>
+
+<!-- SIDE_NAVBAR -->
+    <script>
+        var ob = document.getElementsByClassName("side_item") ;
+
+        for(var k =0 ; k<ob.length ; k++){
+            ob[k].addEventListener("click", function(){
+                for(var m =0 ; m<ob.length ; m++){
+                    ob[m].classList.remove("active_sidebar") ;
+                }
+                this.classList.add("active_sidebar") ;
+
+             });
+        }
+    </script>
+    </body>
+</html>
