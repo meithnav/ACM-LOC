@@ -14,6 +14,8 @@ html{
     width: 100vw;
     height: fit-content;
     scroll-behavior: smooth;
+        /* border: 0.1rem solid rgb(0, 174, 255); */
+
 }
 body{
   position: relative;
@@ -26,6 +28,8 @@ body{
     color: white;
     overflow-x: hidden;
     scroll-behavior: smooth;
+        /* border: 0.1rem solid red; */
+
 
 }
   
@@ -39,6 +43,7 @@ body{
   z-index: 3;
   top: 14%;
   left: 2%;
+  overflow: hidden;
 
   /* border: 0.1rem solid red; */
 }
@@ -46,8 +51,7 @@ body{
   display: block;
   height: fit-content;
   font-size: 2rem;
-  border-left: 0.2rem solid rgba(255, 255, 255, 0.644);
-  margin: 1rem 0rem;
+  border-left: 0.3rem solid rgba(255, 255, 255, 0.5);  margin: 1rem 0rem;
   /* padding-left: 0.5rem; */
   /* border: 0.1rem solid rgb(0, 162, 255); */
   overflow: hidden;
@@ -55,7 +59,7 @@ body{
 
 /* ACTIVE TAB NAVBAR */
 .sidenavbar .side_item.active_sidebar{
-  border-left: 0.4rem solid rgba(241, 29, 100, 0.822);
+  border-left: 0.5rem solid rgba(255, 10, 124, 0.966);
   font-weight:bolder ;
 
 }
@@ -87,6 +91,17 @@ body{
 
 /* RESPONSIVE SIDENAVBAR */
 
+@media(max-width : 780px){
+  .sidenavbar .side_item{
+    border-left: 0.35rem solid rgba(255, 255, 255, 0.5);
+  }
+  
+  /* ACTIVE TAB NAVBAR */
+  .sidenavbar .side_item.active_sidebar{
+    border-left: 0.55rem solid rgba(255, 10, 124, 0.966);
+  }
+}
+
 @media(max-width : 695px){
   .sidenavbar{
     display: none;
@@ -106,6 +121,9 @@ body{
   z-index: 2;
   /* overflow: hidden; */
  /* border: 0.1rem solid red; */
+}
+.header .innerheader{
+  overflow: hidden;
 }
 
 .header .innerheader .items a{
@@ -259,7 +277,7 @@ body{
      width: 100vw;
     height: fit-content;
     padding-bottom: 0rem;
-    padding-top: 3rem;
+    padding-top: 1rem;
     display: block;
     /* border: 0.1rem solid rgb(0, 255, 157);  */
     /* display: none; */
@@ -289,19 +307,19 @@ body{
     width: 18% ;
     position: relative;
     display: block;
-    margin-left: 5rem ;
+    margin-left: 3rem ;
     transition: 0.8s all linear;
     /* border: 0.1rem solid rgb(25, 0, 255);  */
 }
 
  .header .logo a img{
-    width: 75px ;
-    height: 75px;
+    width: 95px ;
+    height: 95px;
 }
 
  .header .logo.activelogo{
     /* margin: 0rem auto; */
-    margin-left:calc(50% - 10rem) ;
+    margin-left:calc(50% - 13rem) ;
 
     transition: 0.8s all linear;
 
@@ -311,14 +329,14 @@ body{
  .header .menubtn{
     display: block;
     position: relative;
-    width: 9rem ;
-    height: 10rem;
+    width: 12rem ;
+    height: fit-content;
     /* border: 0.1rem solid black; */
     margin-right: 5rem;
     overflow: hidden;
     position: absolute;
     right: 1rem ;
-    top: 5.5rem;
+    top: 4.5rem;
 }
 
  .header .menubtn .p{
@@ -332,7 +350,7 @@ body{
  .header .menubtn .p p{
     display: block;
     width: 90%;
-    height: 0.5rem;
+    height: 0.9rem;
     background-color: rgb(247, 240, 240);
     margin: 1.4rem auto;
 }
@@ -381,7 +399,7 @@ body{
 
 }
 .header .innerheader .items:last-of-type{
-  border-bottom:  none;
+  border-bottom:  0.1rem solid rgba(2, 46, 190, 0.76);
 
 }
 
@@ -438,7 +456,85 @@ body{
 
 }
 
+@media(max-width : 500px){
 
+  .header .logo{
+    width: 18% ;
+    margin-left: 0rem ;
+    /* border: 0.1rem solid rgb(25, 0, 255);  */
+}
+  .header .logo a img{
+    width: 110px ;
+    height: 110px;
+}
+
+ .header .logo.activelogo{
+    /* margin: 0rem auto; */
+    margin-left:calc(50% - 14rem) ;
+    /* border: 0.1rem solid rgb(25, 0, 255);  */
+}
+
+ .header .menubtn{
+    width: 13.5rem ;
+    margin-right: 3rem;
+    right: 1rem ;
+    top: 5.5rem;
+}
+
+.header .menubtn .p{
+  width: 90%;
+  height: 100%;
+  margin: 0rem auto;
+  /* border: 0.1rem solid rgb(201, 34, 34); */
+
+}
+
+.header .menubtn .p p{
+  height: 1.0rem;
+  margin: 1.5rem auto;
+}
+
+}
+
+@media(max-width : 380px){
+
+  .header .logo{
+    width: 18% ;
+    margin-left: 0rem ;
+    /* border: 0.1rem solid rgb(25, 0, 255);  */
+}
+  .header .logo a img{
+    width: 110px ;
+    height: 110px;
+}
+
+ .header .logo.activelogo{
+    /* margin: 0rem auto; */
+    margin-left:calc(50% - 14rem) ;
+    /* border: 0.1rem solid rgb(25, 0, 255);  */
+}
+
+ .header .menubtn{
+    width: 13.5rem ;
+    margin-right: 1rem;
+    right: 1rem ;
+    top: 6.5rem;
+}
+
+.header .menubtn .p{
+  width: 90%;
+  height: 100%;
+  margin: 0rem auto;
+  /* border: 0.1rem solid rgb(201, 34, 34); */
+
+}
+
+.header .menubtn .p p{
+  height: 0.9rem;
+  margin: 1.8rem auto;
+}
+
+}
 
 
 /*BODY BANNER*/
@@ -448,7 +544,8 @@ body{
     position: relative;
     overflow: hidden;
     height: fit-content;
-    min-height: 100vh;
+    min-height: 100%;
+    /* max-height: 100%; */
     /* border: 1px solid red; */
     background-image: linear-gradient(to bottom right,#4f3deb , #d81175 );
     background-position: center;
@@ -521,24 +618,508 @@ body{
 
 }
 
-
+/* CLOCK */
 .clock-container{
     position: relative;
     text-align: center;
     align-items: center;
     height: fit-content;
-    width: 100%;
+    width: calc(100% - 1rem );
     background-color: transparent;
     /* margin-bottom: 5%; */
+    margin: 0rem auto;
     margin-top: 2rem;
     
     /* border: 1px solid red; */
   
 }
 
+.clock-container .clockdiv .clock_box{
+  margin-left: 5%;
+  /* border: 1px solid red; */
+}
+
 .clock-container .clockdiv div span{
     font-size: 6rem;
 }
+
+#clockdiv{
+  width: 100%;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 67.3939px;
+font-family: 'Montserrat';
+color: #fff;
+display: inline-block;
+
+/* text-align: center; */
+}
+
+#clockdiv > div{
+padding: 10px;
+border-radius: 3px;
+/* background: #00BF96; */
+display: inline-block;
+}
+
+#clockdiv div > span{
+padding: 15px;
+border-radius: 3px;
+/* background: #00816A; */
+display: inline-block;
+}
+
+.smalltext{
+padding-top: 5px;
+font-weight: 500;
+  font-size: 19.6566px;
+}
+
+.collons{
+  position: relative;
+  left:3%;
+  bottom: 65px;
+  /* border: 0.1rem solid red; */
+
+}
+
+.clock_box .smallscreen{
+  display: none;
+}
+.collons .smalltext h1{
+  font-size: 5rem;
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-width:1000px) {
+
+
+  
+.body_banner .loc h1 .loc_header{
+  font-size: 14rem; 
+  margin-top: 6rem;
+  /* border: 1px solid red; */
+} 
+.body_banner .loc .loc_date{
+  font-size: 4.5rem; 
+  margin: 1.5rem auto;
+
+}
+
+.clock-container{
+  /* margin-bottom: 5%; */
+  margin-top: 3rem;
+  
+  /* border: 1px solid red; */
+
+}
+
+.clock-container .clockdiv .clock_box{
+  margin-left: 2%;
+    /* border: 1px solid red; */
+
+}
+
+.clock-container .clockdiv div span{
+  font-size: 4rem;
+}
+
+.collons{
+  position: relative;
+  left:2%;
+  bottom: 49px;
+  /* border: 0.1rem solid red; */
+
+}
+
+}
+
+@media screen and (max-width:780px) {
+
+
+  
+  .body_banner .loc h1 .loc_header{
+    font-size: 12rem; 
+    margin-top: 5.5rem;
+    /* border: 1px solid red; */
+  } 
+  .body_banner .loc .loc_date{
+    font-size: 4.0rem; 
+    margin: 3.5rem auto;
+  
+  }
+  
+  .clock-container{
+    /* margin-bottom: 5%; */
+    margin-top: 2.5rem;
+    
+    /* border: 1px solid red; */
+  
+  }
+  
+  .clock-container .clockdiv .clock_box{
+    margin-left: 0.5%;
+      /* border: 1px solid red; */
+  
+  }
+  
+  .clock-container .clockdiv div span{
+    font-size: 3.5rem;
+  }
+  
+  .collons{
+    position: relative;
+    left:1%;
+    bottom: 44px;
+    /* border: 0.1rem solid red; */
+  
+  }
+  #clockdiv > div{
+    padding: 5px;
+    }
+    
+    #clockdiv div > span{
+    padding: 8px;
+    border-radius: 3px;
+    /* background: #00816A; */
+    display: inline-block;
+    }
+    
+    .smalltext{
+    padding-top: 5px;
+    }
+    
+  
+  }
+
+@media(max-width : 695px){
+
+    
+  .body_banner .loc h1 .loc_header{
+    font-size: 23rem; 
+    margin-top: 20rem;
+    /* border: 1px solid red; */
+  } 
+  .body_banner .loc .loc_date{
+    font-size: 7.0rem; 
+    margin: 3.5rem auto;
+  }
+  
+  .clock-container{
+    margin-top: 4rem;   
+    /* border: 1px solid red; */
+  
+  }
+  
+  .clock-container .clockdiv .clock_box{
+    margin-left: 0.5%;
+      /* border: 1px solid red; */
+  
+  }
+  
+  .clock-container .clockdiv div span{
+    font-size: 8.5rem;
+  }
+  
+  .collons{
+    position: relative;
+    left:2%;
+    bottom: 50px;
+    /* border: 0.1rem solid red; */
+  
+  }
+
+  .collons .smalltext h1{
+    font-size: 10rem;
+  }
+
+  #clockdiv > div{
+    padding: 0px;
+    }
+    
+    #clockdiv div > span{
+    padding: 5px;
+    border-radius: 3px;
+    /* background: #00816A; */
+    display: inline-block;
+    }
+    
+    .smalltext{
+    padding-top: 5px;
+    }
+    
+
+  }
+
+ @media(max-width : 545px){
+
+    
+    .body_banner .loc h1 .loc_header{
+      font-size: 17rem; 
+      margin-top: 21rem;
+      /* border: 1px solid red; */
+    } 
+    .body_banner .loc .loc_date{
+      font-size: 6.2rem; 
+      margin: 4.0rem auto;
+    }
+    
+    .clock-container{
+      margin-top: 4rem;   
+      /* border: 1px solid red; */
+    
+    }
+    
+    .clock-container .clockdiv .clock_box{
+      margin-left: 0.5%;
+        /* border: 1px solid red; */
+    
+    }
+    
+    .clock-container .clockdiv div span{
+      font-size: 6.5rem;
+    }
+    
+    .collons{
+      position: relative;
+      left:2%;
+      bottom: 40px;
+      /* border: 0.1rem solid red; */
+    
+    }
+    .clock_box .smalltext{
+      font-size: 3.2rem;
+      margin-top: 0rem;
+      /* border: 0.1rem solid red; */
+
+    }
+  
+    .collons .smalltext h1{
+      font-size: 10rem;
+    }
+  
+    #clockdiv > div{
+      padding: 0px;
+      }
+      
+      #clockdiv div > span{
+      padding: 5px;
+      border-radius: 3px;
+      /* background: #00816A; */
+      display: inline-block;
+      }
+      
+      .smalltext{
+      padding-top: 5px;
+      }
+      
+  
+  }
+
+  @media(max-width : 430px){
+    .body_banner{
+      width: 100vw;
+        /* border: 1px solid red; */
+      }
+    
+      .body_banner .loc h1 .loc_header{
+        font-size: 15.5rem; 
+        margin-top: 32rem;
+        /* border: 1px solid red; */
+      } 
+      .body_banner .loc .loc_date{
+        font-size: 5.1rem; 
+        margin: 5.0rem auto;
+      }
+      
+      .clock-container{
+        position: relative;
+        /* width: fit-content; */
+        margin: 0rem auto;  
+        margin-top: 6rem; 
+        overflow: hidden;
+        transform: translateX(4%);
+
+        /* border: 1px solid red; */
+      
+      }
+
+      .clock-container .clockdiv{
+        width: 100%;
+        /* border: 1px solid red; */
+
+
+      }
+      
+      .clock-container .clockdiv .clock_box{
+        overflow: hidden;
+       transform: translateX(-50%);
+          /* border: 1px solid red; */
+      
+      }
+      
+      .clock-container .clockdiv div span{
+        font-size: 5.8rem;
+      }
+      
+      .collons{
+        position: relative;
+        left:-6%;
+        bottom: 55px;
+        margin:0 ;
+        /* border: 0.1rem solid red; */
+      
+      }
+      .clock_box .smalltext{
+        font-size: 3.8rem;
+        margin-top: 0rem;
+        display: none;
+        /* border: 0.1rem solid red; */
+  
+      }
+      .clock_box .smallscreen{
+        display: block;
+      }
+    
+      .collons .smalltext h1{
+        font-size: 6.0rem;
+        margin: 0;
+        /* border: 0.1rem solid red; */
+
+      }
+    
+      #clockdiv > div{
+        padding: 0px;
+        }
+        
+        #clockdiv div > span{
+        padding: 1px;
+        border-radius: 3px;
+        /* background: #00816A; */
+        display: inline-block;
+        }
+        
+        .smalltext{
+        padding-top: 4px;
+        }
+        
+    
+  }
+
+  @media(max-width : 355px){
+
+          .body_banner .loc h1 .loc_header{
+            font-size: 14.5rem; 
+            margin-top: 25rem;
+            /* border: 1px solid red; */
+          } 
+          .body_banner .loc .loc_date{
+            font-size: 4.8rem; 
+            margin: 5.0rem auto;
+          }
+          
+          .clock-container{
+            position: relative;
+            /* width: fit-content; */
+            margin: 0rem auto;  
+            margin-top: 3rem; 
+            overflow: visible;
+            transform: translateX(10%);
+    
+            /* border: 1px solid red; */
+          
+          }
+    
+          .clock-container .clockdiv{
+            width: 100%;
+            /* border: 1px solid red; */
+    
+    
+          }
+          
+          .clock-container .clockdiv .clock_box{
+            overflow: hidden;
+           transform: translateX(-120%);
+           margin-left: -2rem;
+              /* border: 1px solid red; */
+          
+          }
+
+          .clock-container .clockdiv .clock_box:first-of-type{
+            transform: translateX(-50%);
+            margin-left: 0rem;
+          }
+          
+          .clock-container .clockdiv div span{
+            font-size: 5.8rem;
+          }
+          
+          .collons{
+            position: relative;
+            left:-16%;
+            bottom: 55px;
+            margin:0 ;
+            /* border: 0.1rem solid red; */
+          
+          }
+          .collons_first{
+            left: -12%;
+            margin-right: 2rem;
+          }
+        
+          .clock_box .smalltext{
+            font-size: 3.8rem;
+            margin-top: 0rem;
+            display: none;
+            /* border: 0.1rem solid red; */
+      
+          }
+          .clock_box .smallscreen{
+            display: block;
+          }
+        
+          .collons .smalltext h1{
+            font-size: 6.0rem;
+            margin: 0;
+            /* border: 0.1rem solid red; */
+    
+          }
+        
+          #clockdiv > div{
+            padding: 0px;
+            }
+            
+            #clockdiv div > span{
+            padding: 1px;
+            border-radius: 3px;
+            /* background: #00816A; */
+            display: inline-block;
+            }
+            
+            .smalltext{
+            padding-top: 4px;
+            }
+            
+        
+ }
+
+ @media(max-width : 320px){
+
+  .body_banner .loc h1 .loc_header{
+    font-size: 13.5rem; 
+    margin-top: 29rem;
+    /* border: 1px solid red; */
+  } 
+  .body_banner .loc .loc_date{
+    font-size: 4.5rem; 
+    margin: 5.0rem auto;
+  }
+  .clock-container{
+    margin-top: 5rem; 
+  }
+}  
+  
 
 /* BANNER BLOBS */
 
@@ -635,7 +1216,12 @@ body{
 	}
 
 
-/*Lower Block*/
+/*Apply Now*/
+
+.apply{
+  overflow: hidden;
+  width: 100%;
+}
 
 .visit{
     width: 100%;
@@ -715,46 +1301,6 @@ body{
     color: white;
 }
 
-
-
-#clockdiv{
-    width: 100%;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 67.3939px;
-	font-family: 'Montserrat';
-	color: #fff;
-	display: inline-block;
-
-	/* text-align: center; */
-}
-
-#clockdiv > div{
-	padding: 10px;
-	border-radius: 3px;
-	/* background: #00BF96; */
-	display: inline-block;
-}
-
-#clockdiv div > span{
-	padding: 15px;
-	border-radius: 3px;
-	/* background: #00816A; */
-	display: inline-block;
-}
-
-.smalltext{
-	padding-top: 5px;
-	font-weight: 500;
-    font-size: 19.6566px;
-}
-
-.collons{
-    position: relative;
-    left: 45px;
-    bottom: 65px;
-  
-}
 
 .lastyearstats-container{
   text-align: center;
@@ -865,12 +1411,6 @@ body{
         margin-left: 10%;
     }
 
-    #clockdiv{
-        padding: 0 40% 0 34%;
-        text-align: center;
-        
-    }
-
     .button-apply{
         text-align: center;
         align-items: center;
@@ -979,7 +1519,7 @@ body{
 
 }
 
-/* JUNAID */
+/* Footer  */
 .footerModify {
     padding:20px 0px;
   }
@@ -1172,7 +1712,12 @@ body{
     color:white;
 
   }
-  
+  .setting{
+    width: 100%;
+    overflow: hidden;
+    /* border: 0.2rem solid red; */
+
+  }
   
   .font{
     font-family: 'Montserrat';
@@ -1185,6 +1730,8 @@ body{
   }
 
   #faq{
+    /* border: 0.2rem solid red; */
+    overflow: hidden;
     text-align: center;
   }
 
@@ -1207,7 +1754,7 @@ body{
     border-radius: 3px;
   }
   .faq-p-span:hover{
-    color: #ff5395;
+    color: #eb538d;
     font-size: 19px;
   }
   
@@ -1253,7 +1800,7 @@ body{
 
 
   .active, .collapsible:hover {
-    background-color: rgb(255, 67, 57);
+    background-color: #f8307d;
     color: white;
   
   }

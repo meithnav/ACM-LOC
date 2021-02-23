@@ -30,8 +30,8 @@
            <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
            <!--Favicon-->
            <link rel="shortcut icon" href="{% static 'images/acm-black-logo.png' %}" type="image/x-icon">
-        <!-- PageLayout JS -->
-        <script type="text/javascript" src="./home.js"></script>
+        <!-- LOC JS -->
+        <script type="text/javascript" src="./loc.js"></script>
 
            <link rel="stylesheet" href="loc.css">
            <script type="text/javascript" src="loc.js"></script>
@@ -42,7 +42,7 @@
             <div class="logo">
                 <a href="{% url 'home' %}"><img src="./acm-white-logo.png" alt=""></a>
             </div>
-            <div class="menubtn" id="menubtn">
+            <div class="menubtn" id="menubtn" onclick="toggleMenu()">
                 <div class="p">
                     <p id="bar1"></p>
                     <p id="bar2"></p>
@@ -60,6 +60,7 @@
                         <div class="items"><a href="#faq">FAQs</a></div>
                         <div class="items contact"><a href="#sponsors">Sponsors</a></div>
                         <div class="items member"><a href="#" class="membertext">Apply Now</a></div>
+                        
                     </div><!--closes innerheader-->
     
         </div> <!--closes header-->
@@ -95,49 +96,53 @@
               </div>
             <div class="clock-container">
                 <div id="clockdiv" class="clockdiv">
-                    <div>
+                    <div class="clock_box">
                         <span class="days"></span>
                         <div class="smalltext">DAYS</div>
+                        <div class="smalltext smallscreen">DAYS</div>
                      </div>
     
-                     <div class="collons">
+                     <div class="collons collons_first">
                         <!-- <span class="smalltext">:</span> -->
-                        <div class="smalltext"><h1 style="font-size: 5rem;">:</h1></div>
+                        <div class="smalltext"><h1>:</h1></div>
                      </div>
     
     
-                     <div style="margin-left:7%;">
+                     <div class="clock_box">
                       <span class="hours"></span>
                       <div class="smalltext">HOURS</div>
+                      <div class="smalltext smallscreen">HRS</div>
                      </div>
     
                      <div class="collons">
                         <!-- <span class="smalltext">:</span> -->
-                        <div class="smalltext "><h1 style="font-size: 5rem;">:</h1></div>
+                        <div class="smalltext "><h1>:</h1></div>
                      </div>
     
     
-                     <div style="margin-left:7%;">
+                     <div class="clock_box" >
                           <span class="minutes"></span>
                        <div class="smalltext">MINUTES</div>
+                       <div class="smalltext smallscreen">MIN</div>
                      </div>
     
                      <div class="collons">
                         <!-- <span class="smalltext">:</span> -->
-                        <div class="smalltext "><h1 style="font-size: 5rem;">:</h1></div>
+                        <div class="smalltext "><h1>:</h1></div>
                      </div>
     
     
-                     <div style="margin-left:7%;">
-                     <span class="seconds" style="width: 90px;"></span>
-                      <div class="smalltext" style="padding-left: 27px;">SECONDS</div>
+                     <div class="clock_box" >
+                     <span class="seconds"></span>
+                      <div class="smalltext">SECONDS</div>
+                      <div class="smalltext smallscreen">SEC</div>
                      </div>
                 </div>
               </div>
           </div>
          
 
-        <div class="row row-cols-2 "  id="apply" style="width: 100%; padding-top: 10% ;">
+        <div class="row row-cols-2 apply"  id="apply" style="width: 100%; padding-top: 10% ;">
 
             <div class="col-sm-6">
                 <div class="left-side">
@@ -362,13 +367,13 @@
     </div>
    
     <div class="row setting">          
-          <div class="col-lg-3 col-md-4  text-center"><a href="https://www.wolfram.com/language/"><img class="sponsor" style="border-radius: 10px" src="./acm-white-logo.png"></a></div>
+          <div class="col-lg-3 col-md-4  text-center"><a href="https://www.djacm.co.in/"><img class="sponsor" style="border-radius: 10px" src="./acm-white-logo.png"></a></div>
           
-          <div class="col-lg-3 col-sm-4  text-center"><a href="https://codingblocks.com/"><img class="sponsor" style="border-radius: 10px" src="./Vector.png"></a></div>
+          <div class="col-lg-3 col-sm-4  text-center"><a href="#"><img class="sponsor" style="border-radius: 10px" src="./left-info2.png"></a></div>
          <div class="col-lg-3 col-sm-4  text-center"><a href="https://balsamiq.com/"><img class="sponsor" style="border-radius: 10px" src="https://cdn.iconscout.com/icon/free/png-512/devfolio-1649779-1399882.png"></a></div> 
           
           
-          <div class="col-lg-3 col-sm-4  text-center"><a href="https://www.hellointern.com/"><img class="sponsor styleInfo" style="border-radius: 10px" src="./noto-v1_money-bag.png"></a></div>
+          <div class="col-lg-3 col-sm-4  text-center"><a href=""><img class="sponsor styleInfo" style="border-radius: 10px" src="./acm-white-logo.png"></a></div>
           <div class="col-lg-3 col-sm-4  text-center"><a href="https://www.linode.com/"><img class="sponsor" style="border-radius: 10px" src="./logo2.png"></a></div>
     
           <div class="col-lg-3 col-sm-4  text-center"><a href="https://cloudsploit.com/"><img class="sponsor" style="border-radius: 10px" src="./acm-white-logo.png"></a></div>
@@ -649,8 +654,15 @@ for (j = 0; j < coll.length; j++) {
           $(".logo").toggleClass("activelogo");
   
         });
+
+        $(".items").click(function(){
+          $("#innerheader").slideToggle("activemenu");
+          $(".header").toggleClass("activemenu");
+          $(".logo").toggleClass("activelogo");
+  
+        });
       });
-    
+   
    </script>
 
 <!-- SIDE_NAVBAR -->
